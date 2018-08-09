@@ -1,0 +1,15 @@
+Title tehtävä 0.6
+kayttaja->selain: 
+note right of kayttaja
+Käyttäjä lisää uuden noten listaan 
+end note
+selain->palvelin: POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+note left of palvelin
+  lisätään note notejen listaan palvelimella 
+end note
+palvelin->selain: status 201, created
+
+selain->kayttaja:
+note left of selain
+ selain näyttää listan missä on uusi note mukana
+end note

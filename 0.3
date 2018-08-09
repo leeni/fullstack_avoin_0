@@ -1,0 +1,26 @@
+Title tehtävä 0.3
+kayttaja->selain:
+note left of selain
+kayttaja kirjottaa osoiteriville
+https://fullstack-exampleapp.herokuapp.com/notes
+end note
+selain->palvelin: GET https://fullstack-exampleapp.herokuapp.com/notes
+note left of palvelin
+  muodostetaan HTML missä listattuna kaikki muistiinpanot
+end note
+palvelin->selain: status 200, sivun HTML-koodi
+
+selain->palvelin: GET fullstack-exampleapp.herokuapp.com/main.css
+palvelin->selain: status 200, css file
+
+selain->palvelin: GET fullstack-exampleapp.herokuapp.com/main.js
+palvelin->selain: status 200, js file
+
+selain->palvelin: GET fullstack-exampleapp.herokuapp.com/data.json
+palvelin->selain: status 200, json file
+
+note left of selain
+ selain näyttää palvelimen palauttaman HTML:n
+ johon on upotettu palvelimelta haettu data ja siihen on käytetty 
+ css:n tyylitiedostossa määriteltyjä tyylejä
+end note

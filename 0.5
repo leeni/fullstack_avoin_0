@@ -1,0 +1,31 @@
+Title tehtävä 0.5
+kayttaja->selain: 
+note right of kayttaja
+Käyttäjä navigoi 
+https://fullstack-exampleapp.herokuapp.com/spa osoitteeseen
+end note
+selain->palvelin: GET https://fullstack-exampleapp.herokuapp.com/spa
+note left of palvelin
+  lisätään note notejen listaan palvelimella 
+  ja ladataan note sivu uudestaan
+end note
+palvelin->selain: status 200,  html file
+
+selain->palvelin: GET https://fullstack-exampleapp.herokuapp.com/notes
+palvelin->selain: status 200, notes sivu
+
+selain->palvelin: GET fullstack-exampleapp.herokuapp.com/main.css
+palvelin->selain: status 200, css file
+
+selain->palvelin: GET fullstack-exampleapp.herokuapp.com/spa.js
+palvelin->selain: status 200, js file
+
+selain->palvelin: GET fullstack-exampleapp.herokuapp.com/data.json
+palvelin->selain: status 200, json file, data
+
+selain->kayttaja:
+note left of selain
+ selain näyttää palvelimen palauttaman HTML:n
+ johon on upotettu palvelimelta haettu data ja siihen on käytetty 
+ css:n tyylitiedostossa määriteltyjä tyylejä
+end note
